@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Тестовое задание в «Лигу А»",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp start"
   },
   "repository": {
     "type": "git",
@@ -27,19 +31,12 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
-    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
     "posthtml-include": "^1.4.0",
     "stylelint": "^13.2.1",
     "stylelint-config-htmlacademy": "^0.1.4"
-  },
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
-    "start": "gulp start"
   },
   "editorconfig-cli": [
     "*.json",
