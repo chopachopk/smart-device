@@ -1,0 +1,30 @@
+@mixin ptmono {
+  font-family: "PTMono", "Arial", sans-serif;
+}
+
+@mixin roboto {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin button {
+  padding: 12px;
+
+  @include roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}

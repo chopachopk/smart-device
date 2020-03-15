@@ -1,0 +1,9 @@
+.page-header {
+  background-color: $dark-blue;
+  background-image: url("../img/wires-desktop@1x.png");
+  background-size: 100% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/wires-desktop@2x.png");
+  }
+}
