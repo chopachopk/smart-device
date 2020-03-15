@@ -7,3 +7,9 @@
     background-image: url("../img/wires-desktop@2x.png");
   }
 }
+
+@media (max-width: $mobile-width) {
+  .page-header {
+    min-width: 320px;
+  }
+}

@@ -83,7 +83,7 @@
 
   .main-nav__item {
     &--phone {
-      margin-left: 4%;
+      margin-left: 5%;
     }
 
     &--order {
@@ -107,5 +107,21 @@
 
   .main-nav__text-link {
     display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-nav {
+    width: 90%;
+    padding: 17px 0;
+  }
+
+  .main-nav__item--phone {
+    margin-left: 7%;
+  }
+
+  .main-nav__link--logo img {
+    width: 38px;
+    height: 38px;
   }
 }

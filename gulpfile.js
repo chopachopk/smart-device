@@ -70,6 +70,14 @@ gulp.task("images", function () {
     .pipe(gulp.dest("source/img"));
 });
 
+gulp.task("svg", function () {
+  return gulp.src("source/img/**/*.svg")
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
+});
+
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
