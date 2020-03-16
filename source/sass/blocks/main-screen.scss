@@ -1,0 +1,201 @@
+.main-screen {
+  position: relative;
+
+  max-width: 1414px;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+
+.main-screen__title {
+  width: 60%;
+  margin: 225px 0 0;
+
+  @include roboto;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.main-screen__text {
+  max-width: 630px;
+  width: 50%;
+  position: relative;
+  margin: 30px 0 0 100px;
+
+  @include ptmono;
+  font-size: 22px;
+  line-height: 34px;
+  color: $white;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+    left: -95px;
+
+    width: 66px;
+    height: 2px;
+
+    background-color: $white;
+  }
+}
+
+.main-screen__consult-button {
+  @include button;
+  margin: 43px 0 0 100px;
+  padding: 18px 47px;
+
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  background-color: $light-blue;
+
+  border: none;
+}
+
+.main-screen__rotated-text {
+  display: block;
+  overflow: hidden;
+  width: 16px;
+  margin-top: 90px;
+}
+
+.main-screen__scroll-link {
+  display: inline-block;
+  white-space: nowrap;
+
+  @include ptmono;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: $white;
+  text-orientation: upright;
+
+  opacity: 0.5;
+  transform: translate(0, 100%) rotate(-90deg);
+  transform-origin: 0 0;
+
+  &::after {
+    content: "";
+    float: left;
+    margin-top: 100%;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.main-screen__image {
+  position: absolute;
+  top: -57px;
+  left: 56%;
+}
+
+@media (max-width: $tablet-width) {
+  .main-screen {
+    width: 77%;
+    padding-bottom: 163px;
+  }
+
+  .main-screen__title {
+    width: 60%;
+    margin-top: 112px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .main-screen__text {
+    width: 60%;
+    margin: 30px 0 0 50px;
+
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      top: 14px;
+      left: -50px;
+
+      width: 33px;
+    }
+  }
+
+  .main-screen__consult-button {
+    margin: 53px 0 0 50px;
+    padding: 18px 30px;
+  }
+
+  .main-screen__rotated-text {
+    display: none;
+  }
+
+  .main-screen__image {
+    top: -107px;
+    left: 62%;
+
+    width: 520px;
+    height: 385px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-screen {
+    width: 90%;
+    padding-bottom: 70px;
+  }
+
+  .main-screen__title {
+    width: 90%;
+    margin-top: 228px;
+
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .main-screen__text {
+    max-width: 360px;
+    width: 80%;
+    margin: 26px 0 0 50px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      top: 14px;
+      left: -50px;
+
+      width: 33px;
+    }
+  }
+
+  .main-screen__consult-button {
+    margin: 43px 0 0 0;
+    padding: 18px 32px;
+
+    &::after {
+      content: "Бесплатная консультация";
+    }
+  }
+
+  .main-screen__button-text {
+    display: none;
+  }
+
+  .main-screen__image {
+    top: -220px;
+    right: 0;
+
+    width: 294px;
+    height: 368px;
+  }
+}

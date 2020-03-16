@@ -1,15 +1,29 @@
 .page-header {
+  min-width: 320px;
+
   background-color: $dark-blue;
   background-image: url("../img/wires-desktop@1x.png");
-  background-size: 100% auto;
+  background-position: center top;
+
+  overflow: hidden;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/wires-desktop@2x.png");
   }
-}
 
-@media (max-width: $mobile-width) {
-  .page-header {
-    min-width: 320px;
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/wires-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/wires-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/wires-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/wires-mobile@2x.png");
+    }
   }
 }
