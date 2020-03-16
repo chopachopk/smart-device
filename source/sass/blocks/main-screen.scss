@@ -8,6 +8,9 @@
 }
 
 .main-screen__title {
+  position: relative;
+  z-index: 3;
+
   width: 60%;
   margin: 225px 0 0;
 
@@ -99,6 +102,7 @@
   position: absolute;
   top: -57px;
   left: 56%;
+  z-index: 1;
 }
 
 @media (max-width: $tablet-width) {
@@ -179,11 +183,15 @@
   }
 
   .main-screen__consult-button {
+    display: block;
     margin: 43px 0 0 0;
     padding: 18px 32px;
 
     &::after {
       content: "Бесплатная консультация";
+
+      display: block;
+      text-align: center;
     }
   }
 
@@ -192,10 +200,10 @@
   }
 
   .main-screen__image {
-    top: -220px;
-    right: 0;
+    top: -218px;
+    left: 5%;
 
-    width: 294px;
+    width: 603px;
     height: 368px;
   }
 }
