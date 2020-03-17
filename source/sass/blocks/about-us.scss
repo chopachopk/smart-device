@@ -4,11 +4,17 @@
 
   background-color: $white;
   background-image: url("../img/triangles.svg");
+  background-size: 100% auto;
+  background-position: left top 10px;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: $tablet-width) {
   .about-us {
     padding: 55px 0 0;
+
+    background-size: 1920px auto;
+    background-position: center top;
   }
 }
 
