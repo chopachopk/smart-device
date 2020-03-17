@@ -19,8 +19,11 @@
             <a class="main-nav__link main-nav__link--logo" href="#">
               <picture>
                 <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
-                <img class="main-nav__logo" src="img/logo-header.svg" width="201" height="52" alt="Smart Device">
+                <img src="img/logo-header.svg" width="201" height="52" alt="Smart Device">
               </picture>
+              <!-- <img srcset="img/logo-mobile.svg 38w, img/logo-header.svg 201w"
+                   sizes="(max-width: 767px) 38px, 201px"
+                   src="img/logo-header.svg" width="201" height="52" alt="Smart Device"> -->
             </a>
           </li>
           <li class="main-nav__item main-nav__item--email">
@@ -49,6 +52,22 @@
           <source media="(max-width: 1023px)" srcset="img/microcircuits-tablet@1x.png 1x, img/microcircuits-tablet@2x.png 2x">
           <img class="main-screen__image" src="img/microcircuits-desktop@1x.png" srcset="img/microcircuits-desktop@2x.png 2x" width="705" height="515" alt="Микросхемы">
         </picture>
+        <!-- <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/microcircuits-mobile@1x.webp 1x, img/microcircuits-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/microcircuits-tablet@1x.webp 1x, img/microcircuits-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/microcircuits-desktop@1x.webp 1x, img/microcircuits-desktop@2x.webp 2x">
+          <img class="main-screen__image"
+               srcset="img/microcircuits-desktop@1x.png 705w,
+                       img/microcircuits-desktop@2x.png 1410w,
+                       img/microcircuits-tablet@1x.png 520w,
+                       img/microcircuits-tablet@2x.png 1040w,
+                       img/microcircuits-mobile@1x.png 603w,
+                       img/microcircuits-mobile@2x.png 1206w"
+               sizes="(max-width: 767px) 603px,
+                      (max-width: 1023px) 520px,
+                      705px"
+               src="img/microcircuits-desktop@1x.png" width="705" height="515" alt="Микросхемы">
+        </picture> -->
           <h1 class="main-screen__title">Печатные платы</h1>
           <p class="main-screen__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
           <a class="main-screen__consult-button" href="#">
@@ -92,6 +111,17 @@
           </li>
         </ul>
         <div class="about-us__info">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/year-tablet@1x.webp 1x, img/year-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/year-desktop@1x.webp 1x, img/year-desktop@2x.webp 2x">
+            <img srcset="img/year-desktop@1x.png 115w,
+                         img/year-desktop@2x.png 230w,
+                         img/year-tablet@1x.png 131w,
+                         img/year-tablet@2x.png 262w"
+                 sizes="(max-width: 1023px) 131px,
+                         115px"
+                 src="img/year-desktop@1x.png" alt="2005">
+          </picture>
           <h1>О компании</h1>
           <p>
             Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
