@@ -17,14 +17,14 @@
   max-width: 1170px;
   width: 90%;
   margin: 75px auto 0;
-  padding-bottom: 95px;
+  padding-bottom: 97px;
 }
 
 .about-us__info img {
   margin: 10px 65px 0 0;
 }
 
-.about-us__info h1 {
+.about-us__info h2 {
   margin: 0;
 
   @include roboto;
@@ -80,7 +80,7 @@
   .about-us__info {
     width: 93.5%;
     margin: 30px auto 0;
-    padding-bottom: 95px;
+    padding-bottom: 80px;
   }
 
   .about-us__info img {
@@ -89,7 +89,7 @@
     margin: 5px 55px 0 0;
   }
 
-  .about-us__info h1 {
+  .about-us__info h2 {
     font-size: 32px;
     line-height: 45px;
   }
@@ -103,11 +103,11 @@
   }
 
   .about-us__info p {
-    margin: 20px 0 0;
+    margin: 22px 0 0;
   }
 
   .about-us__info-button {
-    margin-top: 40px;
+    margin-top: 45px;
   }
 }
 
@@ -126,7 +126,7 @@
     display: none;
   }
 
-  .about-us__info h1 {
+  .about-us__info h2 {
     font-size: 28px;
     line-height: 39px;
   }

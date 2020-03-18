@@ -1,0 +1,239 @@
+.service {
+  min-width: 320px;
+  padding: 90px 0 120px;
+
+  background-color: $dark-blue;
+}
+
+.service__wrapper {
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service h2 {
+  margin: 0 0 50px;
+
+  @include roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+}
+
+.service__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include reset-list;
+}
+
+.service__item {
+  flex-basis: 20%;
+  flex-grow: 1;
+
+  box-sizing: border-box;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--production {
+    background-image: url("../img/production-desktop@1x.png");
+  }
+
+  &--mounting {
+    background-image: url("../img/mounting-desktop@1x.png");
+  }
+
+  &--components {
+    background-image: url("../img/components-desktop@1x.png");
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .service__item {
+    &--production {
+      background-image: url("../img/production-desktop@2x.png");
+    }
+
+    &--mounting {
+      background-image: url("../img/mounting-desktop@2x.png");
+    }
+
+    &--components {
+      background-image: url("../img/components-desktop@2x.png");
+    }
+  }
+}
+
+.service__link {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+  height: 620px;
+  padding: 50px 45px 0;
+
+  @include roboto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: $white;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 63px;
+    height: 63px;
+    background-color: $light-blue;
+    background-image: url("../img/angle.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-color: rgba($light-blue, 0.1);
+  }
+
+  &:focus {
+    background-color: rgba($light-blue, 0.2);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .service {
+    padding: 50px 0 78px;
+  }
+
+  .service__wrapper {
+    width: 93%;
+  }
+
+  .service h2 {
+    margin: 0 0 45px;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .service__list {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .service__item {
+    flex-basis: auto;
+
+    margin: 0 0 46px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    background-position: center center;
+
+    &--production {
+      background-image: url("../img/production-tablet@1x.png");
+    }
+
+    &--mounting {
+      background-image: url("../img/mounting-tablet@1x.png");
+    }
+
+    &--components {
+      background-image: url("../img/components-tablet@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .service__item {
+      &--production {
+        background-image: url("../img/production-tablet@2x.png");
+      }
+
+      &--mounting {
+        background-image: url("../img/mounting-tablet@2x.png");
+      }
+
+      &--components {
+        background-image: url("../img/components-tablet@2x.png");
+      }
+    }
+  }
+
+  .service__link {
+    height: 256px;
+    padding: 43px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .service {
+    padding: 50px 0 64px;
+  }
+
+  .service__wrapper {
+    width: 90%;
+  }
+
+  .service h2 {
+    margin: 0 0 40px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .service__item {
+    margin: 0 0 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--production {
+      background-image: url("../img/production-mobile@1x.png");
+    }
+
+    &--mounting {
+      background-image: url("../img/mounting-mobile@1x.png");
+    }
+
+    &--components {
+      background-image: url("../img/components-mobile@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .service__item {
+      &--production {
+        background-image: url("../img/production-mobile@2x.png");
+      }
+
+      &--mounting {
+        background-image: url("../img/mounting-mobile@2x.png");
+      }
+
+      &--components {
+        background-image: url("../img/components-mobile@2x.png");
+      }
+    }
+  }
+
+  .service__link {
+    height: 256px;
+    padding: 22px 35px;
+  }
+}

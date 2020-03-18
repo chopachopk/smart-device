@@ -35,7 +35,7 @@
   background-color: $light-blue;
   border-color: $light-blue;
 
-  h2,
+  h3,
   p {
     color: $white;
   }
@@ -45,7 +45,7 @@
   }
 }
 
-.advantages__item h2 {
+.advantages__item h3 {
   margin: 16px 0 0;
 
   @include roboto;
@@ -75,7 +75,7 @@
     padding: 20px 20px 20px 25px;
   }
 
-  .advantages__item h2 {
+  .advantages__item h3 {
     margin: 7px 0 0;
   }
 
@@ -97,7 +97,7 @@
     padding: 24px 15px 20px 22px;
   }
 
-  .advantages__item h2 {
+  .advantages__item h3 {
     margin: 7px 0 0;
 
     font-size: 20px;
