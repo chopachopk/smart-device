@@ -152,6 +152,40 @@
           </ul>
         </div>
       </section>
+      <section class="consult">
+        <div class="consult__wrapper">
+          <div class="consult__inner-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/airplane-desktop@1x.webp 1x, img/airplane-desktop@2x.webp 2x">
+              <img srcset="img/airplane-desktop@1x.png 1x, img/airplane-desktop@2x.png 2x"
+                   src="img/airplane-desktop@1x.png" width="686" height="641" alt="Почтовый аэроплан">
+            </picture>
+            <h2>Остались вопросы? Задайте их нам!</h2>
+            <p>Мы проконсультируем Вас бесплатно</p>
+            <form class="consult__form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="consult__info">
+                <div>
+                  <label class="visually-hidden" for="name">Имя</label>
+                  <input type="text" name="name" id="name" placeholder="Имя">
+                </div>
+                <div>
+                  <label class="visually-hidden" for="phone">Телефон</label>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
+                </div>
+              </div>
+              <label class="visually-hidden" for="question">Ваш вопрос</label>
+              <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+              <div class="consult__submit">
+                <button type="submit" name="send-question">Задать вопрос</button>
+                <div>
+                  <input class="consult__agreement visually-hidden" type="checkbox" name="agreement" value="yes" id="agreed" checked>
+                  <label for="agreed">Я согласен на обработку персональных данных</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
 

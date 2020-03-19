@@ -1,0 +1,255 @@
+.consult {
+  min-width: 320px;
+  padding: 93px 0 115px;
+
+  background-color: $light-blue;
+}
+
+.consult__wrapper {
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.consult__inner-wrapper {
+  position: relative;
+
+  width: 570px;
+  margin-left: auto;
+}
+
+.consult img {
+  position: absolute;
+  top: -150px;
+  left: -800px;
+}
+
+.consult h2 {
+  margin: 0;
+
+  @include roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+}
+
+.consult p {
+  margin: 10px 0 0;
+
+  @include ptmono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.consult__form input,
+.consult__form textarea {
+  box-sizing: border-box;
+  padding: 14px 16px;
+
+  @include ptmono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+
+  background-color: rgba($white, 0.1);
+  border: none;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.consult__info {
+  margin: 48px 0 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.consult__info input {
+  min-width: 270px;
+}
+
+.consult__form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 155px;
+  resize: none;
+}
+
+.consult__submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 40px 0 0;
+}
+
+.consult__form button {
+  @include button;
+  min-width: 270px;
+  color: $white;
+
+  background-color: $light-blue;
+  border-color: $white;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.consult__submit label {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+  width: 270px;
+  padding-left: 40px;
+
+  @include ptmono;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 8px;
+
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $white;
+  }
+}
+
+.consult__agreement:checked + label::before {
+  background-image: url("../img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+}
+
+@media (max-width: $tablet-width) {
+  .consult {
+    padding: 82px 0 110px;
+  }
+
+  .consult__wrapper {
+    width: auto;
+  }
+
+  .consult__inner-wrapper {
+    width: 76%;
+    margin: 0 auto;
+  }
+
+  .consult img {
+    display: none;
+  }
+
+  .consult h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .consult p {
+    margin: 15px 0 0;
+  }
+
+  .consult__info {
+    margin: 53px 0 40px;
+  }
+
+  .consult__info div,
+  .consult__submit button,
+  .consult__submit div {
+    flex-basis: 47%;
+  }
+
+  .consult__info input {
+    width: 100%;
+  }
+
+  .consult__form textarea {
+    height: 160px;
+  }
+
+  .consult__submit {
+    margin: 45px 0 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .consult {
+    padding: 30px 0 42px;
+  }
+
+  .consult__inner-wrapper {
+    width: 90%;
+  }
+
+  .consult h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .consult p {
+    margin: 15px 0 0;
+  }
+
+  .consult__info {
+    flex-direction: column;
+    margin: 22px 0 0;
+  }
+
+  .consult__info div {
+    flex-basis: auto;
+    margin-bottom: 32px;
+  }
+
+  .consult__info input {
+    width: 100%;
+  }
+
+  .consult__form textarea {
+    height: 105px;
+  }
+
+  .consult__submit {
+    flex-direction: column;
+    margin: 30px 0 0;
+  }
+
+  .consult__submit button {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .consult__submit div {
+    flex-basis: auto;
+    width: 100%;
+    margin: 32px 0 0;
+  }
+
+  .consult__submit label {
+    width: 100%;
+    padding-left: 30px;
+
+    &::before {
+      left: 0;
+    }
+  }
+}
