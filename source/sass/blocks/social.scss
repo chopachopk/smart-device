@@ -1,0 +1,23 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include reset-list;
+}
+
+.social__item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link svg {
+  fill: #cdcdcd;
+}
+
+.social__link:hover svg {
+  fill: $light-blue;
+}
