@@ -69,6 +69,10 @@
   }
 }
 
+.main-screen__button-text--mobile {
+  display: none;
+}
+
 .main-screen__rotated-text {
   display: block;
   overflow: hidden;
@@ -174,33 +178,18 @@
     line-height: 47px;
   }
 
-  .main-screen__text {
-    max-width: 360px;
-    width: 80%;
-    margin: 26px 0 0 50px;
-
-    font-size: 16px;
-    line-height: 24px;
-
-    &::before {
-      top: 14px;
-      left: -50px;
-
-      width: 33px;
-    }
-  }
-
   .main-screen__consult-button {
     display: block;
     margin: 43px 0 0 0;
     padding: 18px 32px;
+  }
 
-    &::after {
-      content: "Бесплатная консультация";
+  .main-screen__button-text--desktop {
+    display: none;
+  }
 
-      display: block;
-      text-align: center;
-    }
+  .main-screen__button-text--mobile {
+    display: inline;
   }
 
   .main-screen__button-text {

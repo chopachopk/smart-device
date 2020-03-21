@@ -74,7 +74,8 @@
   writing-mode: horizontal-tb;
 }
 
-.footer__map-item a {
+.footer__map-item a,
+.footer__contacts a {
   @include ptmono;
   font-size: 15px;
   line-height: 25px;
