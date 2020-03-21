@@ -261,17 +261,21 @@
       width: 17px;
       border-bottom: 1px solid #c4c4c4;
     }
+  }
 
-    &::after {
-      content: "";
+  h2.closed__info::after {
+    content: "";
 
-      position: absolute;
-      top: 29px;
-      right: 8px;
+    position: absolute;
+    top: 29px;
+    right: 8px;
 
-      height: 17px;
-      border-left: 1px solid #c4c4c4;
-    }
+    height: 17px;
+    border-left: 1px solid #c4c4c4;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .footer__map {
@@ -290,7 +294,6 @@
   }
 
   .footer__map-list {
-    display: none;
     padding: 0 0 30px;
   }
 
@@ -299,8 +302,6 @@
   }
 
   .footer__contacts p {
-    display: none;
-
     margin: 0;
     padding: 0 0 30px;
   }

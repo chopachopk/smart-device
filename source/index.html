@@ -70,16 +70,16 @@
         </picture> -->
           <h1 class="main-screen__title">Печатные платы</h1>
           <p class="main-screen__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="main-screen__consult-button" href="#">
+          <a class="main-screen__consult-button" href="#question">
             <span class="main-screen__button-text">Получить бесплатную консультацию</span>
           </a>
           <span class="main-screen__rotated-text">
-            <a class="main-screen__scroll-link" href="#">Скролл вниз</a>
+            <a class="main-screen__scroll-link" href="#about">Скролл вниз</a>
           </span>
       </section>
     </header>
     <main class="page-main">
-      <section class="about-us">
+      <section class="about-us" id="about">
         <ul class="about-us__advantages-list advantages">
           <li class="advantages__item">
             <svg width="35" height="35"><use xlink:href="#icon-stopwatch"></use></svg>
@@ -152,7 +152,7 @@
           </ul>
         </div>
       </section>
-      <section class="consult">
+      <section class="consult" id="question">
         <div class="consult__wrapper">
           <div class="consult__inner-wrapper">
             <picture>
@@ -166,19 +166,19 @@
               <div class="consult__info">
                 <div>
                   <label class="visually-hidden" for="name">Имя</label>
-                  <input type="text" name="name" id="name" placeholder="Имя">
+                  <input type="text" name="name" id="name" placeholder="Имя" required>
                 </div>
                 <div>
                   <label class="visually-hidden" for="phone">Телефон</label>
-                  <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{4}" minlength="18" maxlength="18" required>
                 </div>
               </div>
               <label class="visually-hidden" for="question">Ваш вопрос</label>
-              <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+              <textarea name="question" id="question" placeholder="Ваш вопрос" required></textarea>
               <div class="consult__submit">
                 <button type="submit" name="send-question">Задать вопрос</button>
                 <div>
-                  <input class="consult__agreement visually-hidden" type="checkbox" name="agreement" value="yes" id="agreed" checked>
+                  <input class="consult__agreement visually-hidden" type="checkbox" name="agreement" value="yes" id="agreed" required>
                   <label for="agreed">Я согласен на обработку персональных данных</label>
                 </div>
               </div>
@@ -251,5 +251,27 @@
         </div>
       </div>
     </footer>
+
+    <section class="popup">
+      <button class="popup__close" type="button"  name="close-popup">
+        Закрыть
+      </button>
+      <h2 class="popup__title">Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="name-popup">Имя</label>
+        <input type="text" name="name-popup" id="name-popup" placeholder="Имя" required>
+        <label class="visually-hidden" for="phone-popup">Телефон</label>
+        <input type="tel" name="phone-popup" id="phone-popup" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{4}" minlength="18" maxlength="18" required>
+        <label class="visually-hidden" for="question-popup">Ваш вопрос</label>
+        <textarea name="question-popup" id="question-popup" placeholder="Ваш вопрос" required></textarea>
+        <button type="submit" name="send-question">Отправить</button>
+        <input class="popup__agreement visually-hidden" type="checkbox" name="agreement" value="yes" id="agreed-popup" required checked>
+        <label for="agreed-popup">Я согласен на обработку персональных данных</label>
+      </form>
+    </section>
+    <div class="overlay"></div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
