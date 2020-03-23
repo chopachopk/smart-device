@@ -1,6 +1,7 @@
 // Управление попапом
 var ESC_KEYCODE = 27;
 
+var body = document.querySelector('body');
 var popupOpen = document.querySelector('.main-nav__order-button');
 var popup = document.querySelector('.popup');
 var popupClose = document.querySelector('.popup__close');
@@ -13,12 +14,14 @@ var onPopupEscPress = function (evt) {
 
 var openPopup = function () {
   popup.classList.add('popup-show');
+  body.classList.add('hidden-scroll');
   nameField.focus();
   document.addEventListener('keydown', onPopupEscPress);
 };
 
 var closePopup = function () {
   popup.classList.remove('popup-show');
+  body.classList.remove('hidden-scroll');
   document.removeEventListener('keydown', onPopupEscPress);
 };
 
