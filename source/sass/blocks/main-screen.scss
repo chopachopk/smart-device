@@ -1,6 +1,4 @@
 .main-screen {
-  position: relative;
-
   max-width: 1414px;
   width: 90%;
   margin: 0 auto;
@@ -8,9 +6,6 @@
 }
 
 .main-screen__title {
-  position: relative;
-  z-index: 3;
-
   width: 60%;
   margin: 225px 0 0;
 
@@ -110,13 +105,6 @@
   }
 }
 
-.main-screen__image {
-  position: absolute;
-  top: -57px;
-  left: 56%;
-  z-index: 1;
-}
-
 @media (max-width: $tablet-width) {
   .main-screen {
     width: 77%;
@@ -154,14 +142,6 @@
   .main-screen__rotated-text {
     display: none;
   }
-
-  .main-screen__image {
-    top: -107px;
-    left: 62%;
-
-    width: 520px;
-    height: 385px;
-  }
 }
 
 @media (max-width: $mobile-width) {
@@ -178,9 +158,17 @@
     line-height: 47px;
   }
 
+  .main-screen__text {
+    width: 80%;
+    margin: 27px 0 0 50px;
+
+    font-size: 16px;
+    line-height: 25px;
+  }
+
   .main-screen__consult-button {
     display: block;
-    margin: 43px 0 0 0;
+    margin: 40px 0 0 0;
     padding: 18px 32px;
   }
 
@@ -194,13 +182,5 @@
 
   .main-screen__button-text {
     display: none;
-  }
-
-  .main-screen__image {
-    top: -218px;
-    left: 5%;
-
-    width: 603px;
-    height: 368px;
   }
 }

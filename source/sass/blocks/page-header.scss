@@ -2,28 +2,30 @@
   min-width: 320px;
 
   background-color: $dark-blue;
-  background-image: url("../img/wires-desktop@1x.png");
-  background-position: center top;
-
-  overflow: hidden;
+  background-image: url("../img/microcircuits-desktop@1x.png"), url("../img/wires-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-position: left 54vw top 260px, center top;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/wires-desktop@2x.png");
+    background-image: url("../img/microcircuits-desktop@2x.png"), url("../img/wires-desktop@2x.png");
   }
 
   @media (max-width: $tablet-width) {
-    background-image: url("../img/wires-tablet@1x.png");
+    background-image: url("../img/microcircuits-tablet@1x.png"), url("../img/wires-tablet@1x.png");
+    background-position: left 59vw top 80px, center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/wires-tablet@2x.png");
+      background-image: url("../img/microcircuits-tablet@2x.png"), url("../img/wires-tablet@2x.png");
     }
   }
 
   @media (max-width: $mobile-width) {
-    background-image: url("../img/wires-mobile@1x.png");
+    background-image: url("../img/microcircuits-mobile@1x.png"), url("../img/wires-mobile@1x.png");
+    background-position: left 9vw top 70px, center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/wires-mobile@2x.png");
+      background-image: url("../img/microcircuits-mobile@2x.png"), url("../img/wires-mobile@2x.png");
     }
   }
 }
