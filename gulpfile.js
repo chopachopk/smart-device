@@ -50,13 +50,11 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include() //makes tag include work (paste svg sprite)
     ]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
 gulp.task("js", function () {
   return gulp.src("source/js/**/*.js")
-    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 
