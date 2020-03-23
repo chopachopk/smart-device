@@ -26,6 +26,10 @@
     margin-right: 0;
   }
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   svg {
     fill: $light-blue;
   }
