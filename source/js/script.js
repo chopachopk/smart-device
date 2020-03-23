@@ -100,25 +100,46 @@ for (var i = 0; i < telInputs.length; i++) {
 // Аккордеон в подвале
 var TABLET_WIDTH = 767;
 var mapButton = document.querySelector('.footer__map h2');
+var mapList = document.querySelector('.footer__map-list');
 var contactsButton = document.querySelector('.footer__contacts h2');
+var contactsList = document.querySelector('.footer__contacts p');
 
-var onAccordionButtonPress = function (evt) {
-  var content = this.nextElementSibling;
-  this.classList.toggle('closed__info');
-  content.classList.toggle('hidden');
+var onMapButtonPress = function (evt) {
+  if (mapButton.classList.contains('closed__info') && !contactsButton.classList.contains('closed__info')) {
+    contactsButton.classList.toggle('closed__info');
+    contactsList.classList.toggle('hidden');
+  }
+  mapButton.classList.toggle('closed__info');
+  mapList.classList.toggle('hidden');
 };
 
+var onContactsButtonPress = function (evt) {
+  if (contactsButton.classList.contains('closed__info') && !mapButton.classList.contains('closed__info')) {
+    mapButton.classList.toggle('closed__info');
+    mapList.classList.toggle('hidden');
+  }
+  contactsButton.classList.toggle('closed__info');
+  contactsList.classList.toggle('hidden');
+};
+
+var hideInfo = function () {
+  mapButton.classList.add('closed__info');
+  mapList.classList.add('hidden');
+  contactsButton.classList.add('closed__info');
+  contactsList.classList.add('hidden');
+  mapButton.addEventListener('click', onMapButtonPress);
+  contactsButton.addEventListener('click', onContactsButtonPress);
+}
+
 if (window.innerWidth < TABLET_WIDTH) {
-  mapButton.addEventListener('click', onAccordionButtonPress);
-  contactsButton.addEventListener('click', onAccordionButtonPress);
+  hideInfo();
 }
 
 window.addEventListener('resize', function() {
   if (window.innerWidth < TABLET_WIDTH) {
-    mapButton.addEventListener('click', onAccordionButtonPress);
-    contactsButton.addEventListener('click', onAccordionButtonPress);
+    hideInfo();
   } else {
-    mapButton.removeEventListener('click', onAccordionButtonPress);
-    contactsButton.removeEventListener('click', onAccordionButtonPress);
+    mapButton.removeEventListener('click', onMapButtonPress);
+    contactsButton.removeEventListener('click', onContactsButtonPress);
   }
 })
