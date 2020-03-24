@@ -135,6 +135,10 @@
     height: 14px;
     border: 1px solid $white;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .consult__agreement:checked + label::before {

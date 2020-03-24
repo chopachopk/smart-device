@@ -147,6 +147,10 @@
     height: 14px;
     border: 1px solid $white;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .popup__agreement:checked + label::before {
