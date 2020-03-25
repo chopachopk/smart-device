@@ -4,7 +4,7 @@
   background-color: $dark-blue;
   background-image: url("../img/microcircuits-desktop@1x.png"), url("../img/wires-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: auto, cover;
+  background-size: 705px auto, cover;
   background-position: left 54vw top 260px, center top;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -13,6 +13,7 @@
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/microcircuits-tablet@1x.png"), url("../img/wires-tablet@1x.png");
+    background-size: 520px auto, cover;
     background-position: left 59vw top 80px, center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -22,6 +23,7 @@
 
   @media (max-width: $mobile-width) {
     background-image: url("../img/microcircuits-mobile@1x.png"), url("../img/wires-mobile@1x.png");
+    background-size: 603px auto, cover;
     background-position: left 9vw top 70px, center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
